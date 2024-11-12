@@ -1,0 +1,39 @@
+/* Footer.css */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Κεντράρισμα */
+    padding: 1rem;
+    background-color: #333; /* Σκούρο χρώμα φόντου */
+    color: #fff; /* Λευκό κείμενο */
+}
+
+.social-media {
+    margin-top: 1rem; /* Προσθέστε το περιθώριο εδώ */
+    margin-bottom: 1rem; /* Προσθέστε το περιθώριο εδώ */
+}
+
+.working-hours {
+    margin-top: 1rem; /* Προσθέστε το περιθώριο εδώ */
+    margin-bottom: 1rem; /* Προσθέστε το περιθώριο εδώ */
+}
+
+.site-footer h4 {
+    margin: 0.5rem 0; /* Μικρό περιθώριο πάνω και κάτω */
+}
+
+.site-footer a {
+    color: #fff; /* Λευκό χρώμα για τους συνδέσμους */
+    text-decoration: none; /* Αποτροπή υπογράμμισης */
+}
+
+.site-footer a:hover {
+    text-decoration: underline; /* Υπογράμμιση όταν κάνετε hover */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Κάθετη στοίχιση για το footer */
+    align-items: center; /* Κεντράρισμα προς το κέντρο */
+    width: 100%; /* Κάνει την γραμμή πλήρους πλάτους */
+}

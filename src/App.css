@@ -1,0 +1,134 @@
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column; /* Κάνουμε την διάταξη στήλης */
+  min-height: 100vh; /* Ελάχιστο ύψος οθόνης */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo-text:hover {
+  color: #ddd;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Στυλ για τους συνδέσμους του μενού */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Προσθήκη εφέ μετάβασης */
+}
+
+nav ul li a:visited {
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #ADD8E6; /* Ανοιχτό γαλάζιο χρώμα για hover */
+}
+
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-button,
+.signup-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  background-color: #777;
+}
+
+main {
+  flex: 1; /* Κάνει το κύριο περιεχόμενο να καταλαμβάνει τον διαθέσιμο χώρο */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid black;
+  /* Κάνουμε το footer σχετικό, ώστε να ακολουθεί το κύριο περιεχόμενο */
+  position: relative; 
+}
+
+.footer-content p,
+.footer-content a {
+  margin: 0.2rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #ccc;
+}
+
+.auth-links .profile-icon {
+  display: flex; /* Χρησιμοποιούμε flexbox για κεντράρισμα */
+  flex-direction: column; /* Τοποθετεί τα στοιχεία σε στήλη */
+  align-items: center; /* Κεντράρισμα */
+  text-decoration: none; /* Αφαιρεί την υπογράμμιση */
+}
+
+
+.auth-links .profile-icon:hover {
+  opacity: 0.7; /* Αλλάξτε την ορατότητα όταν κάνετε hover */
+}
+
+.auth-links .profile-icon span {
+  font-size: 12px; /* Μικρή γραμματοσειρά */
+  color: #fff; /* Χρώμα γραμματοσειράς */
+  margin-top: 5px; /* Απόσταση πάνω από το εικονίδιο */
+  display: block; /* Κάνει τη λέξη να εμφανίζεται σε νέα γραμμή */
+  text-align: center; /* Κεντράρισμα κειμένου */
+  text-decoration: none; /* Αφαιρεί την υπογράμμιση από το span */
+  color: #fff; /* Ορίζει το χρώμα της λέξης */
+}

@@ -1,0 +1,109 @@
+/* Στυλ για τη σελίδα εισόδου και εγγραφής */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Πλήρης ύψος οθόνης */
+  background-image: url('../assets/images/clean_car_rental_image.jpg'); /* Εικόνα φόντου */
+  background-size: cover; /* Καλύπτει όλη την οθόνη */
+  background-repeat: no-repeat; /* Αποτροπή επανάληψης εικόνας */
+  background-position: center; /* Κεντράρισμα εικόνας */
+}
+
+.form-container {
+  max-width: 400px;
+  width: 100%; /* Προσθήκη για να είναι responsive */
+  padding: 2rem;
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Λευκό φόντο με διαφάνεια */
+  backdrop-filter: blur(10px); /* Θολώστε το φόντο για καλύτερη αναγνωσιμότητα */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Προσθήκη σκιάς */
+  display: flex; /* Χρησιμοποιούμε flexbox για να τα τοποθετήσουμε δίπλα-δίπλα */
+  flex-direction: column; /* Στοίχιση κάθετα */
+  align-items: center; /* Κεντραρισμένα */
+  margin-top: 1rem; /* Προσθέτουμε λίγο περιθώριο από πάνω */
+}
+
+.auth-page h2 {
+  margin-bottom: 1rem;
+  font-size: 24px; /* Αυξήστε το μέγεθος του τίτλου */
+  color: #333; /* Σκούρο χρώμα για καλύτερη αναγνωσιμότητα */
+}
+
+.auth-page label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.auth-page input {
+  width: 100%;
+  padding: 0.8rem; /* Αυξήστε το padding για πιο άνετο πεδίο */
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Σαφή όρια με διαφάνεια */
+  background-color: rgba(255, 255, 255, 0.6); /* Διαφανές φόντο */
+  color: #000; /* Σκούρο χρώμα κειμένου για αναγνωσιμότητα */
+}
+
+.auth-page input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Αχνή γραμματοσειρά */
+  opacity: 1; /* Βεβαιωθείτε ότι η γραμματοσειρά είναι ορατή */
+}
+
+.auth-page button {
+  padding: 0.8rem 1.2rem; /* Αυξήστε το padding για το κουμπί */
+  color: #fff;
+  background-color: #333; /* Σκούρο χρώμα για το κουμπί */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Αυξήστε το μέγεθος γραμματοσειράς */
+  margin-top: 25px;
+}
+
+.auth-page button:hover {
+  background-color: #555; /* Ανοιχτό χρώμα όταν κάνετε hover */
+}
+
+/* Στυλ για checkbox */
+.auth-page input[type="checkbox"] {
+  margin-right: 0.5rem; /* Κενό δεξιά */
+  vertical-align: middle; /* Ευθυγράμμιση με κείμενο */
+}
+
+/* Στυλ για το footer */
+.auth-page .form-footer {
+  display: flex; /* Χρησιμοποιούμε flexbox για να τα τοποθετήσουμε δίπλα-δίπλα */
+  align-items: center; /* Κεντραρισμένα κάθετα */
+  justify-content: space-between; /* Κεντραρισμένο με κενό μεταξύ τους */
+  width: 100%; /* Κάνει την γραμμή πλήρους πλάτους */
+  margin-top: 1.5rem; /* Προσθέτουμε λίγο περιθώριο από πάνω */
+  justify-content: flex-start; /* Αρχικοποιούμε την ευθυγράμμιση στα αριστερά */
+}
+
+/* Στυλ για το Remember me */
+.auth-page .form-footer label {
+  margin: 0; /* Αφαιρεί το margin για καλύτερη ευθυγράμμιση */
+}
+
+/* Στυλ για το Forget Password? */
+.auth-page .form-footer a {
+  color: #0026ff; /* Μπλε χρώμα για τον σύνδεσμο */
+  text-decoration: none; /* Αποτροπή υπογράμμισης */
+}
+
+/* Ειδικά για τον σύνδεσμο "Εγγραφή" */
+.auth-page .form-footer a:last-child {
+  color: #0026ff; /* Αλλάξτε το χρώμα σε μπλε */
+  text-decoration: none; /* Αποτροπή υπογράμμισης */
+}
+
+.auth-page .form-footer a:last-child:hover {
+  text-decoration: underline; /* Υπογράμμιση όταν κάνετε hover */
+}
+
+.form-footer p {
+  text-align: center; /* Κεντράρισμα του κειμένου */
+}
