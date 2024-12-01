@@ -7,6 +7,8 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ContactPage from "./pages/ContactPage"; // Εισαγωγή ContactPage
 import profileIcon from './assets/icons/profile.png'; // Εισάγετε το εικονίδιο
+import CarsPage from "./pages/CarsPage"; // Εισαγωγή του CarsPage
+import RentForm from "./pages/RentForm"; // Εισαγωγή του RentForm
 
 function App() {
     return (
@@ -36,6 +38,8 @@ function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
                     <Route path="/contact" element={<ContactPage />} /> {/* Route για την σελίδα επαφής */}
+                    <Route path="/cars" element={<CarsPage />} /> {/* Νέα διαδρομή */}
+                    <Route path="/rent" element={<RentForm />} /> {/* Route για τη φόρμα */}
                 </Routes>
                 <footer className="site-footer">
                     <div className="footer-content">

@@ -1,0 +1,70 @@
+.cars-page {
+    padding: 2rem;
+    text-align: center;
+    background-color: #474747; /* Σκούρο φόντο όπως το footer */
+    color: #fff; /* Λευκά γράμματα για ευκρίνεια */
+    min-height: 100vh; /* Εξασφαλίζει ότι η σελίδα καλύπτει όλο το ύψος */
+}
+
+.cars-page h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #fff; /* Λευκό χρώμα για τον τίτλο */
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Πάντα 3 στήλες ανά γραμμή */
+    gap: 2rem; /* Απόσταση μεταξύ των αυτοκινήτων */
+    justify-content: center; /* Κεντράρισμα του grid */
+}
+
+.car-card {
+    background: #1a1a1a; /* Φόντο της κάρτας */
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem; /* Περιθώρια μέσα στην κάρτα */
+}
+
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Αυξημένη σκιά στο hover */
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Στρογγυλεμένες γωνίες στην κορυφή */
+}
+
+.car-card h3 {
+    margin: 0.5rem 0;
+    font-size: 20px;
+    color: #fff; /* Λευκό χρώμα για το όνομα του αυτοκινήτου */
+}
+
+.car-card p {
+    font-size: 16px;
+    color: #ddd; /* Ανοιχτό γκρι για την τιμή */
+}
+
+.rent-button {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+    background-color: #0056b3;
+}

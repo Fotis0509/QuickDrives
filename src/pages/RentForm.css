@@ -1,0 +1,188 @@
+/* Τίτλος της σελίδας */
+.rent-page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2rem; /* Απόσταση από τα πλαίσια */
+    width: 100%; /* Εξασφαλίζει ότι πιάνει όλο το πλάτος */
+}
+
+/* Τίτλος κοντέινερ */
+.rent-title-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem; /* Απόσταση από τα πλαίσια */
+}
+
+/* Τίτλος */
+.rent-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+/* Γενικό styling για τη σελίδα */
+.rent-form-page {
+    display: flex;
+    flex-direction: column; /* Κάθετη διάταξη */
+    justify-content: center; /* Κεντρική στοίχιση */
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #1c1c1c; /* Πιο σκούρο φόντο */
+    color: #f5f5f5; /* Ελαφρώς πιο φωτεινό λευκό για κείμενο */
+    min-height: 100vh; /* Πλήρες ύψος οθόνης */
+}
+
+/* Κοντέινερ για τα δύο πλαίσια */
+.rent-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Κεντρική στοίχιση */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Στυλ για τα πλαίσια */
+.car-details-box,
+.form-box {
+    background-color: rgba(20, 20, 20, 0.9); /* Πιο σκούρο φιμέ φόντο */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Εντονότερη σκιά */
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Εικόνα αυτοκινήτου */
+.car-details-box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Σκιά για την εικόνα */
+}
+
+/* Κείμενο για τις λεπτομέρειες */
+.car-details-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e0e0e0; /* Πιο φωτεινό γκρι */
+    text-align: center;
+}
+
+/* Τίτλος λεπτομερειών */
+.car-details-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0; /* Πιο φωτεινό γκρι για τους τίτλους */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Φόρμα συμπλήρωσης */
+.form-box .rent-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Στυλ για τα πεδία της φόρμας */
+.rent-form input,
+.rent-form textarea {
+    width: 100%;
+    padding: 0.8rem; /* Αύξηση padding για καλύτερη αίσθηση */
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Φιμέ περίγραμμα */
+    background-color: rgba(255, 255, 255, 0.2); /* Ανοιχτό φιμέ φόντο */
+    color: #ffffff; /* Λευκό κείμενο */
+    text-align: center; /* Κεντρική στοίχιση */
+    box-sizing: border-box;
+}
+
+/* Στυλ για τα πεδία κειμένου */
+.rent-form textarea {
+    resize: none; /* Απενεργοποίηση αλλαγής μεγέθους */
+}
+
+/* Κουμπί υποβολής */
+.rent-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Εφέ hover στο κουμπί */
+.rent-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Ελαφρύ zoom στο hover */
+}
+
+/* Placeholder styling */
+.rent-form input::placeholder,
+.rent-form textarea::placeholder {
+    text-align: center; /* Κεντρική στοίχιση */
+    color: #dcdcdc; /* Πιο ανοιχτό χρώμα */
+}
+
+.rent-form label {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #ddd; /* Ελαφρύ γκρι για ετικέτες */
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.rent-form input[type="date"] {
+    text-align: center; /* Κεντρική στοίχιση κειμένου */
+    background-color: rgba(255, 255, 255, 0.2); /* Απαλό φόντο */
+    color: #fff; /* Λευκό χρώμα κειμένου */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Φιμέ περίγραμμα */
+    border-radius: 4px;
+    padding: 0.8rem;
+    box-sizing: border-box;
+}
+
+.date-label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8); /* Απαλό λευκό για την ετικέτα */
+    margin-bottom: 0.5rem;
+    display: block; /* Εμφανίζεται πάνω από το πεδίο */
+    text-align: center;
+}
+
+.rent-form input[type="date"]::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Χρώμα για το placeholder (fallback σε παλιότερα προγράμματα) */
+}
+
+
+.back-button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: #555; /* Σκούρο γκρι */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #777; /* Πιο φωτεινό γκρι στο hover */
+    transform: scale(1.05); /* Ελαφρύ zoom στο hover */
+}
+
+.back-button:active {
+    background-color: #333; /* Ακόμα πιο σκούρο στο click */
+}
