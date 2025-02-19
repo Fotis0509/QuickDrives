@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
-import "./Footer.css"; // Εισαγωγή του Footer CSS
+import "./Footer.css"; 
 import Banner from "./components/Banner";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import ContactPage from "./pages/ContactPage"; // Εισαγωγή ContactPage
-import profileIcon from './assets/icons/profile.png'; // Εισάγετε το εικονίδιο
-import CarsPage from "./pages/CarsPage"; // Εισαγωγή του CarsPage
-import RentForm from "./pages/RentForm"; // Εισαγωγή του RentForm
+import ContactPage from "./pages/ContactPage"; 
+import profileIcon from './assets/icons/profile.png'; 
+import CarsPage from "./pages/CarsPage"; 
+import RentForm from "./pages/RentForm"; 
+import API_BASE_URL from "./config"; // Εισαγωγή του Base URL
 
 function App() {
+
+    useEffect(() => {
+        fetch(`${API_BASE_URL}/test`)
+            .then(response => response.json())
+            .then(data => console.log("Απάντηση από το backend:", data))
+            .catch(error => console.error("Σφάλμα σύνδεσης:", error));
+    }, []);
+
     return (
         <Router>
             <div className="App">
@@ -37,9 +46,9 @@ function App() {
                     <Route path="/" element={<Banner />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
-                    <Route path="/contact" element={<ContactPage />} /> {/* Route για την σελίδα επαφής */}
-                    <Route path="/cars" element={<CarsPage />} /> {/* Νέα διαδρομή */}
-                    <Route path="/rent" element={<RentForm />} /> {/* Route για τη φόρμα */}
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/cars" element={<CarsPage />} />
+                    <Route path="/rent" element={<RentForm />} />
                 </Routes>
                 <footer className="site-footer">
                     <div className="footer-content">
