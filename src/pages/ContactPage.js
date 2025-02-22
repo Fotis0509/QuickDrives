@@ -35,7 +35,7 @@ export default ContactPage;
 */
 
 import React, { useState } from "react";
-import "./ContactPage.css";
+import "./Contact.css";
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -79,50 +79,63 @@ const ContactPage = () => {
 
     return (
         <div className="contact-page">
-            <h2>Επικοινωνήστε μαζί μας</h2>
-            <form className="contact-form" onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
-                    name="full_name" 
-                    placeholder="Ονοματεπώνυμο" 
-                    value={formData.full_name} 
-                    onChange={handleChange} 
-                    required 
-                />
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Διεύθυνση Email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    required 
-                />
-                <input 
-                    type="tel" 
-                    name="phone" 
-                    placeholder="Τηλέφωνο (προαιρετικό)" 
-                    value={formData.phone} 
-                    onChange={handleChange} 
-                />
-                <input 
-                    type="tel" 
-                    name="mobile" 
-                    placeholder="Κινητό" 
-                    value={formData.mobile} 
-                    onChange={handleChange} 
-                    required 
-                />
-                <textarea 
-                    name="message" 
-                    rows="4" 
-                    placeholder="Το μήνυμά σας" 
-                    value={formData.message} 
-                    onChange={handleChange} 
-                    required 
-                ></textarea>
-                <button type="submit">Αποστολή</button>
-            </form>
-            {responseMessage && <p className="response-message">{responseMessage}</p>}
+            <div className="left-column">
+                <h2>Σχετικά με εμάς</h2>
+                <p>
+                    Η εταιρεία QuickDrives εδρεύει στο χώρο της ενοικίασης αυτοκινήτων από το 2024.
+                    Παρέχουμε άριστες υπηρεσίες σε προσιτές τιμές.
+                    Καλύπτουμε όλες τις ανάγκες σας για μετακίνηση στην πόλη και όχι μόνο.
+                    Είμαστε εδώ για να σας εξυπηρετούμε με επαγγελματισμό και αφοσίωση.
+                </p>
+            </div>
+            <div className="right-column">
+                <h3>Επικοινωνήστε μαζί μας</h3>
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <input 
+                            type="text" 
+                            name="full_name" 
+                            placeholder="Ονοματεπώνυμο" 
+                            value={formData.full_name} 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Διεύθυνση Email" 
+                            value={formData.email} 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            placeholder="Τηλέφωνο (προαιρετικό)" 
+                            value={formData.phone} 
+                            onChange={handleChange} 
+                        />
+                        <input 
+                            type="tel" 
+                            name="mobile" 
+                            placeholder="Κινητό" 
+                            value={formData.mobile} 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <textarea 
+                            name="message" 
+                            rows="4" 
+                            placeholder="Το μήνυμά σας" 
+                            value={formData.message} 
+                            onChange={handleChange} 
+                            required 
+                        ></textarea>
+                    </div>
+                    <button type="submit">Υποβολή</button>
+                </form>
+                {responseMessage && <p className="response-message">{responseMessage}</p>}
+            </div>
         </div>
     );
 };

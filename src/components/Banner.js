@@ -2,13 +2,10 @@
 import React from "react";
 import "./Banner.css";
 
-const Banner = ({ onRentClick }) => {
+const Banner = () => {
   return (
     <div className="banner">
       <img src="/car-banner.jpg" alt="Car Rental Banner" className="banner-image" />
-      <button className="banner-button" onClick={onRentClick}>
-        Rent Car Now
-      </button>
     </div>
   );
 };

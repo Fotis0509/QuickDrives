@@ -14,12 +14,6 @@ const LoginPage = () => {
           <div className="form-group">
             <input type="password" id="password" name="password" placeholder="Κωδικός" required />
           </div>
-          <div className="form-footer">
-            <label>
-              <input type="checkbox" /> Remember me
-            </label>
-            <a href="/forgot-password">Forget Password?</a>
-          </div>
           <button type="submit">Σύνδεση</button>
         </form>
         <p>Δεν έχετε λογαριασμό; <a href="/signup">Εγγραφή</a></p>

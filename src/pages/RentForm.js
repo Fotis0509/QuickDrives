@@ -79,16 +79,16 @@ const RentForm = () => {
     const navigate = useNavigate();
     const car = location.state?.car;
 
-    console.log("Car Data:", car); // 🔹 Εμφάνιση των δεδομένων του αυτοκινήτου στο console
+    // **Κατάσταση για ημερομηνίες και συνολικό κόστος** (Τοποθετήθηκε στην κορυφή)
+    const [startDate, setStartDate] = useState("");
+    const [endDate, setEndDate] = useState("");
+    const [totalCost, setTotalCost] = useState(0);
 
     if (!car) {
         return <div>Το αυτοκίνητο δεν βρέθηκε.</div>;
     }
 
-    // **Κατάσταση για ημερομηνίες και συνολικό κόστος**
-    const [startDate, setStartDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [totalCost, setTotalCost] = useState(0);
+    console.log("Car Data:", car); // 🔹 Εμφάνιση των δεδομένων του αυτοκινήτου στο console
 
     // **Συνάρτηση υπολογισμού κόστους**
     const calculateTotalCost = (start, end) => {
@@ -117,7 +117,8 @@ const RentForm = () => {
             <h1 className="rent-title">Ενοικιαζόμενο Αυτοκίνητο</h1>
             <div className="rent-container">
                 <div className="car-details-box">
-                    <img src={car.image_url} alt={car.name} />
+                    {/* 🔹 Ενημερωμένη διαδρομή εικόνας ώστε να εμφανίζεται σωστά */}
+                    <img src={car.imageUrl || car.image_url} alt={car.name} />
                     <h3>{car.name}</h3>
                     <ul>
                         <li>Μάρκα: {car.brand}</li>
