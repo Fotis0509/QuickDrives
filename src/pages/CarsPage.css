@@ -68,3 +68,174 @@
 .rent-button:hover {
     background-color: #0056b3;
 }
+
+
+
+
+/* 🔹 Διάταξη της σελίδας */
+.cars-page {
+    display: flex;
+    justify-content: center; /* Κεντράρισμα των αυτοκινήτων */
+    padding: 20px;
+}
+
+/* 🔹 Διάταξη του grid */
+.cars-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 ανά σειρά και προσαρμογή */
+    gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: start; /* Ευθυγράμμιση από πάνω */
+}
+
+/* 🔹 Κάρτες Αυτοκινήτων */
+.car-card {
+    width: 300px; /* Σταθερό πλάτος */
+    height: 450px; /* Σταθερό ύψος */
+    padding: 20px;
+    border: 1px solid #22368b;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #000000;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Εικόνες αυτοκινήτων */
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 🔹 Εξασφαλίζει ότι το grid παραμένει ευθυγραμμισμένο */
+@media (max-width: 900px) {
+    .cars-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Προσαρμογή σε μικρότερες οθόνες */
+    }
+}
+
+@media (max-width: 600px) {
+    .cars-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Μονή στήλη σε κινητά */
+    }
+}
+
+.car-card h3 {
+    font-size: 20px; /* Μεγαλύτερη γραμματοσειρά */
+    margin: 19px 0;
+}
+
+/* 🔹 Sidebar φίλτρων */
+.filter-sidebar {
+    width: 300px; /* Αύξηση πλάτους */
+    padding: 25px;
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Κεντρική στοίχιση */
+}
+
+/* 🔹 Τίτλος φίλτρων */
+.filter-sidebar h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #555;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+/* 🔹 Ομαδοποίηση φίλτρων */
+.filter-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Labels */
+.filter-sidebar label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* 🔹 Select και Input */
+.filter-sidebar select,
+.filter-sidebar input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background-color: #aabeda;
+    color: #000;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Μεγαλύτερο κενό μεταξύ των πεδίων */
+}
+
+/* 🔹 Hover effect */
+.filter-sidebar select:hover,
+.filter-sidebar input:hover {
+    border-color: #007bff;
+}
+
+/* 🔹 Focus effect */
+.filter-sidebar select:focus,
+.filter-sidebar input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 🔹 Στυλ για το κουμπί Εκκαθάρισης Φίλτρων */
+.clear-filters-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+}
+
+.clear-filters-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+.no-results {
+    font-size: 38px; /* Μεγαλύτερη γραμματοσειρά */
+    font-weight: bold; /* Έντονη γραμματοσειρά */
+    color: #ff4d4d; /* Κόκκινο χρώμα */
+    text-align: center; /* Κεντραρισμένο κείμενο */
+    width: 100%; /* Να καταλαμβάνει όλο το διαθέσιμο πλάτος */
+    display: flex;
+    justify-content: flex-start; /* Μετακινεί το μήνυμα δεξιά */
+    align-items: center; /* Κεντράρει κάθετα */
+    height: 50vh; /* Τοποθετεί το μήνυμα στο κέντρο της σελίδας */
+    white-space: nowrap; /* Το μήνυμα θα είναι σε μία γραμμή */
+    padding-left: 80px; /* Αυξάνει την απόσταση από τα αριστερά για να πάει πιο δεξιά */
+}
