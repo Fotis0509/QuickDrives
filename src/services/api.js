@@ -32,6 +32,7 @@ export const login = async (credentials) => {
     }
 };
 
+
 // 🔹 Εγγραφή νέου χρήστη
 export const signup = async (userData) => {
     try {
@@ -66,6 +67,29 @@ export const createReservation = async (reservationData, token) => {
         if (!response.ok) throw new Error(data.error || "Αποτυχία κράτησης.");
         return data;
     } catch (error) {
+        throw error;
+    }
+};
+
+export const getUserDashboard = async (token) => {
+    try {
+        const response = await fetch("http://localhost:5000/users/dashboard", { // ✅ Χρήση του σωστού URL
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Σφάλμα: ${response.status} - ${errorText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error("❌ Σφάλμα API:", error);
         throw error;
     }
 };

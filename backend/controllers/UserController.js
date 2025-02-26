@@ -1,5 +1,7 @@
 const UserService = require("../services/UserService"); // ✅ Εισαγωγή του UserService
 const User = require("../models/User");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 class UserController {
   static async register(req, res) {

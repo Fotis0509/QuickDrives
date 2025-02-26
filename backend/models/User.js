@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
+const Reservation = require("./Reservation");
 
 const User = sequelize.define("User", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -12,5 +13,9 @@ const User = sequelize.define("User", {
     defaultValue: "user" // Προεπιλεγμένος ρόλος
   },
 }, { timestamps: false });
+
+// ✅ Σύνδεση του User με τις Κρατήσεις (Ένας χρήστης μπορεί να έχει πολλές κρατήσεις)
+User.hasMany(Reservation, { as: "reservations", foreignKey: "user_id" });
+Reservation.belongsTo(User, { foreignKey: "user_id" });
 
 module.exports = User;
