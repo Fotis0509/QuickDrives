@@ -1,0 +1,111 @@
+/* 🔹 Popup Overlay */
+.rent-form-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* ✅ Πιο σκούρο overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* 🔹 Container */
+.rent-form-container {
+    background: rgb(31, 30, 30); /* ✅ Πιο σκούρο γκρι */
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(4, 0, 255, 0.5); /* ✅ Πιο έντονη σκιά */
+    text-align: center;
+    position: relative;
+}
+
+/* 🔹 Κουμπί Κλεισίματος */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgb(180, 0, 0);
+}
+
+/* 🔹 Φόρμα Στυλ */
+.rent-form-container h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #000000; /* ✅ Πιο σκούρα περίμετρος */
+    border-radius: 8px;
+    font-size: 16px;
+    background: #949292; /* ✅ Σκούρο φόντο */
+    color: #000000; /* ✅ Λευκό κείμενο */
+}
+
+/* 🔹 Στυλ για τα Date Pickers */
+.date-picker {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.date-picker label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #1067da;
+}
+
+.date-picker input {
+    width: 93%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #222; /* ✅ Πιο σκούρα περίμετρος */
+    background: #949292; /* ✅ Σκούρο φόντο */
+    color: #474646; /* ✅ Λευκό κείμενο */
+}
+
+/* 🔹 Κουμπί Κράτησης */
+.rent-button {
+    background: #007bff;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rent-button:hover {
+    background: #0056b3;
+}
+
+/* 🔹 Μήνυμα Επιβεβαίωσης */
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}

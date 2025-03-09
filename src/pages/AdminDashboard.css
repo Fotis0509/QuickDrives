@@ -1,0 +1,233 @@
+/* 🔹 Γενικές Ρυθμίσεις */
+.admin-container {
+    max-width: 1100px; /* ✅ Αυξήθηκε το μέγεθος για να χωράει τον πίνακα */
+    margin: 30px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+/* 🔹 Στοίχιση πληροφοριών Admin στο κέντρο */
+.admin-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    padding: 20px;
+}
+
+.admin-info-container h2 {
+    margin-bottom: 10px;
+}
+
+.admin-info-container p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.admin-table {
+    width: 95%; /* ✅ Αύξηση του πλάτους ώστε να προσαρμόζεται σωστά */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.admin-table th, .admin-table td {
+    padding: 8px; /* ✅ Μείωση padding */
+    border: 1px solid #444;
+    text-align: center;
+    color: white;
+    font-size: 13px; /* ✅ Μείωση γραμματοσειράς */
+}
+
+.admin-table th {
+    background: #222;
+    font-weight: bold;
+}
+
+/* 🔹 Στήλες με καλύτερη στοίχιση */
+.admin-table td:nth-child(1), 
+.admin-table td:nth-child(2), 
+.admin-table td:nth-child(3) {
+    text-align: left;
+}
+
+/* 🔹 Στυλ για το μενού επιλογών */
+.admin-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.admin-menu button {
+    background-color: #8d8d8d; /* Γκρι κουμπιά */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.admin-menu button:hover {
+    background-color: #666; /* Λίγο πιο φωτεινό γκρι στο hover */
+    transform: scale(1.05);
+}
+
+/* 🔹 Στυλ για το επιλεγμένο κουμπί */
+.admin-menu button.active {
+    background-color: #007bff; /* Μπλε όταν είναι ενεργό */
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+
+/* 🔹 Στυλ για την εικόνα του αυτοκινήτου */
+.car-image {
+    width: 80px; /* ✅ Μικρότερο μέγεθος */
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 🔹 Βελτιωμένο Styling για τα Κουμπιά */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.edit-button, .delete-button {
+    padding: 6px 10px;
+    font-size: 12px; /* ✅ Μείωση μεγέθους κουμπιών */
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* 🔹 Στήλη με κουμπιά ενέργειας */
+.admin-table th:last-child, .admin-table td:last-child {
+    width: 150px;
+}
+
+/* 🔹 Στυλ για το κουμπί Αποσύνδεσης */
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 14px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 180px;
+    transition: background-color 0.3s, transform 0.2s;
+
+    /* ✅ Τοποθέτηση κάτω από τον πίνακα, ΚΕΝΤΡΑΡΙΣΜΕΝΟ */
+    display: block;
+    margin: 30px auto 0 auto; /* ✅ Βάζει απόσταση πάνω & κεντράρει */
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* 🔹 Στοίχιση του πλαισίου επεξεργασίας στο ΚΕΝΤΡΟ */
+.edit-form-row td {
+    text-align: center;
+    padding: 20px;
+}
+
+.edit-form {
+    background: #3a3a3a;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 45%; /* ✅ Μικρότερο μέγεθος */
+    min-width: 350px; 
+}
+
+.edit-form label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddd;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-form input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #666;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 Κουμπιά Στοίχιση */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.save-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.save-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

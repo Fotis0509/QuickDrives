@@ -1,0 +1,116 @@
+/* 🔹 Κεντρική Διάταξη */
+body {
+    background: #1c1c1c; /* ✅ Σκούρο φόντο για όλη τη σελίδα */
+    color: #ffffff; /* ✅ Λευκά γράμματα παντού */
+}
+
+.cars-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🔹 Φίλτρα */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filters-container input, 
+.filters-container select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444; /* ✅ Σκούρο περίγραμμα */
+    font-size: 16px;
+    background: #2b2b2b; /* ✅ Σκούρο φόντο στα φίλτρα */
+    color: white; /* ✅ Λευκά γράμματα */
+}
+
+.clear-filters {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.clear-filters:hover {
+    background: darkred;
+}
+
+/* 🔹 Λίστα Αυτοκινήτων */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* 🔹 Κάρτα Αυτοκινήτου */
+.car-card {
+    background: #292929; /* ✅ Σκούρο γκρι φόντο */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    color: white; /* ✅ Λευκά γράμματα */
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Εικόνα Αυτοκινήτου */
+.car-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 🔹 Πληροφορίες Αυτοκινήτου */
+.car-info {
+    margin-top: 10px;
+}
+
+.car-info h3 {
+    font-size: 18px;
+    color: white; /* ✅ Λευκά γράμματα */
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00ff66; /* ✅ Έντονο πράσινο για καλύτερη ανάγνωση */
+}
+
+/* 🔹 Κουμπί Ενοικίασης */
+.rent-button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.rent-button:hover {
+    background: #0056b3;
+}
+
+/* 🔹 Μήνυμα όταν δεν υπάρχουν αποτελέσματα */
+.no-results {
+    font-size: 18px;
+    color: gray;
+    margin-top: 20px;
+}

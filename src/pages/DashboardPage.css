@@ -1,0 +1,220 @@
+/* 🔹 Γενικές Ρυθμίσεις */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1f1f1f;
+    padding-top: 50px;
+}
+
+/* 🔹 Κεντρικό Dashboard */
+.dashboard-page {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+/* 🔹 Κεφαλίδες */
+.dashboard-page h2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 🔹 Στοιχεία Χρήστη */
+.dashboard-page p,
+.dashboard-page strong {
+    color: #fff;
+}
+
+/* 🔹 Κουμπί Αποσύνδεσης */
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* 🔹 Λίστα Κρατήσεων */
+.reservation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reservation-item {
+    background: #3a3a3a;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.reservation-item:hover {
+    transform: scale(1.02);
+}
+
+/* 🔹 Εικόνα Αυτοκινήτου */
+.reservation-img {
+    width: 130px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Πληροφορίες Κράτησης */
+.reservation-info {
+    text-align: center;
+    width: 100%;
+}
+
+.reservation-info strong {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 🔹 Κουμπιά Ενημέρωσης και Διαγραφής */
+.reservation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* 🔹 Φόρμα Επεξεργασίας Κράτησης */
+.edit-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: #292929;
+    border-radius: 10px;
+    color: white;
+    margin-top: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Στοίχιση Ημερομηνιών */
+.edit-form .date-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.edit-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ddd;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.edit-form input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #666;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 Κουμπιά στο Κέντρο και στην ΙΔΙΑ ΓΡΑΜΜΗ */
+.edit-form .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 🔹 Σχεδιασμός Κουμπιών */
+.save-button, .cancel-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    width: 160px;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Νέα Σχεδίαση στα Κουμπιά */
+.save-button {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 255, 0, 0.3);
+}
+
+.save-button:hover {
+    background: linear-gradient(135deg, #218838, #1a662e);
+    transform: scale(1.08);
+}
+
+.cancel-button {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 3px 6px rgba(255, 0, 0, 0.3);
+}
+
+.cancel-button:hover {
+    background: linear-gradient(135deg, #c82333, #9b1e28);
+    transform: scale(1.08);
+}

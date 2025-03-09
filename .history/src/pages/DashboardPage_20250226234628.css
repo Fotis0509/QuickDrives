@@ -1,0 +1,79 @@
+/* 🔹 Στυλ αποκλειστικά για το Dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Μετακινεί το dashboard πιο ψηλά */
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2b2b2b; /* Σκούρο γκρι ΜΟΝΟ για το Dashboard */
+    padding-top: 50px;
+}
+
+/* 🔹 Κεντράρουμε το Dashboard */
+.dashboard-page {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    background: #3a3a3a; /* Σκούρο γκρι */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(134, 125, 125, 0.1);
+    text-align: center;
+    color: #fff; /* ✅ Όλα τα γράμματα γίνονται λευκά */
+}
+
+/* 🔹 Στυλ για τους τίτλους */
+.dashboard-page h2 {
+    color: #fff; /* ✅ Λευκός τίτλος */
+    font-weight: bold;
+}
+
+/* 🔹 Στυλ για τα υπόλοιπα κείμενα */
+.dashboard-page p,
+.dashboard-page strong {
+    color: #fff; /* ✅ Λευκά όλα τα κείμενα */
+}
+
+/* 🔹 Λίστα κρατήσεων */
+.dashboard-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-page li {
+    background: #555;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff; /* ✅ Λευκό κείμενο στις κρατήσεις */
+}
+
+/* 🔹 Κουμπί Αποσύνδεσης */
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* 🔹 Το Footer ΜΟΝΟ στο Dashboard στο κάτω μέρος */
+.dashboard-container .site-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
