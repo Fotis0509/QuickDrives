@@ -10,7 +10,6 @@ const { Op } = require("sequelize");
 const router = express.Router();
 
 // 🔹 Δημιουργία νέας κράτησης (ΜΟΝΟ αν ο χρήστης είναι συνδεδεμένος)
-// 🔹 Δημιουργία νέας κράτησης με έλεγχο διαθεσιμότητας
 router.post("/", verifyToken, async (req, res) => {
     try {
         const { car_id, full_name, email, phone, mobile, start_date, end_date, message, total_price } = req.body;
@@ -30,24 +29,22 @@ router.post("/", verifyToken, async (req, res) => {
             return res.status(400).json({ error: "Η ημερομηνία λήξης πρέπει να είναι μετά την ημερομηνία έναρξης." });
         }
 
-        // 🔍 **Έλεγχος αν υπάρχουν επικαλυπτόμενες κρατήσεις**
+        console.log("🛠 Έλεγχος επικαλυπτόμενων κρατήσεων για car_id:", car_id);
+        console.log("📅 Περίοδος: ", startDate.toISOString(), " έως ", endDate.toISOString());
+
         const overlappingReservations = await Reservation.findAll({
             where: {
                 car_id: car_id,
-                [Op.or]: [
-                    {
-                        start_date: { [Op.between]: [startDate, endDate] }, // Αν η ημερομηνία έναρξης είναι σε υπάρχουσα κράτηση
-                    },
-                    {
-                        end_date: { [Op.between]: [startDate, endDate] }, // Αν η ημερομηνία λήξης είναι σε υπάρχουσα κράτηση
-                    },
-                    {
-                        start_date: { [Op.lte]: startDate }, // Αν υπάρχει κράτηση που περιέχει αυτή την περίοδο
-                        end_date: { [Op.gte]: endDate },
-                    },
-                ],
+                [Op.and]: [
+                    { start_date: { [Op.lte]: endDate } },  // Ξεκινάει πριν ή μέσα στην περίοδο
+                    { end_date: { [Op.gte]: startDate } }   // Τελειώνει μετά ή μέσα στην περίοδο
+                ]
             },
         });
+        
+        
+
+        console.log("🔍 Βρέθηκαν επικαλυπτόμενες κρατήσεις:", overlappingReservations.length);
 
         if (overlappingReservations.length > 0) {
             return res.status(400).json({ error: "🚫 Αυτό το αυτοκίνητο είναι ήδη κρατημένο στις επιλεγμένες ημερομηνίες!" });
@@ -155,9 +152,5 @@ router.delete("/:id", verifyToken, async (req, res) => {
         res.status(500).json({ error: "Αποτυχία διαγραφής κράτησης." });
     }
 });
-
-
-
-
 
 module.exports = router;
